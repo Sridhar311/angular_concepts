@@ -1,0 +1,102 @@
+<table>
+    <tr>
+        <td>
+            @if(isParavisible===true){
+                <p>This is sample paragraph done using if and else decorator</p>
+            }
+            @else{
+                <h4>isParavisible has false value</h4>
+            }
+            
+        </td>
+        <td>
+            @if(isParavisible===false){
+            <button class="btn btn-success" (click)="show()" >Show P</button>
+            }
+            @else{
+            <button class="btn btn-danger" (click)="hide()" >Hide P</button>
+            }
+        </td>          
+    </tr><br>
+    <tr>
+        <td>     <br>
+            @if(startMonth=='jan'){
+                <span>January</span>
+            }
+            @else if(startMonth=='feb'){
+                <span>February</span>
+            }
+            @else if(startMonth=='mar'){
+                <span>March</span>
+            }
+            @else if(startMonth=='apr'){
+                <span>April</span>
+            }
+            @else if(startMonth=='may'){
+                <span>May</span>
+            }
+            @else if(startMonth=='jun'){
+                <span>June</span>
+            }
+            @else if(startMonth=='jul'){
+                <span>July</span>
+            }
+            @else if(startMonth=='aug'){
+                <span>August</span>
+            }
+            @else if(startMonth=='sep'){
+                <span>September</span>
+            }
+            @else if(startMonth=='oct'){
+                <span>October</span>
+            }
+            @else if(startMonth=='nov'){
+                <span>November</span>
+            }
+            @else if(startMonth=='dec'){
+                <span>December</span>
+            }
+            @else{
+                <span>Invalid Month</span>
+            }
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="startMonth">
+        </td>
+    </tr><br>
+    <tr>
+        <td><h5>Retrieved using For decorator</h5></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                @for(item of cityList; track $index){
+                    <li>{{item}}</li>
+                }
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h5>Iterated array of objects using for decorator</h5>
+<!--Iterating array of objects-->
+<table>
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(item of arrayofObjects;track $index){
+            <tr>
+                <td>{{$index+1}} </td>
+                <td>{{item.name}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.isActive?"Active":"Deactive"}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

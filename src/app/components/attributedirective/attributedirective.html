@@ -1,0 +1,43 @@
+<h3>Attribute directive[ngClass,ngSyle] used</h3>
+<div class="row">
+    <div class="col-3">
+        <div class="p-3" [ngClass]="className()" >
+            Div 1 - {{className()}}
+        </div>
+    </div>
+    <div class="col-3">
+  <div
+    class="p-3"
+    [ngStyle]="{
+      'background-color': isDivgreen ? 'green' : 'white'
+    }">
+
+    Div 2
+
+  </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="changeClass('bg-success')">Green</button>
+        <button class="btn btn-danger" (click)="changeClass('bg-danger')">Red</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="toggle()">Toggle Bg color</button>
+        
+    </div>    
+</div>
+<br><br>
+<div>
+    <h2>Life cycle events</h2>
+    <ul>
+        <li><h4>OnInit</h4></li>
+        <li><h4>AfterContentInit</h4></li>
+        <li><h4>AfterContentChecked</h4></li>
+        <li><h4>AfterViewInit</h4></li>
+        <li><h4>AfterViewChecked</h4></li>
+        <li><h4>OnDestroy</h4></li>
+    </ul>
+</div>
+
+<h5>View the console to see the component lifecycle</h5>

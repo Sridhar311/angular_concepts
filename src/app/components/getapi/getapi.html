@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-4">
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+            @if (!isLoading) {
+                @for (items of userList; track items.id) {
+                    <tr>
+                        <td>{{ items.name }}</td>
+                        <td>{{ items.username }}</td>
+                        <td>{{ items.email }}</td>
+                        <td>{{ items.website }}</td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(items of todoList; track $index)
+                {
+                    <tr>
+                        <td>{{items.title}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(items of Bookings;track $index){
+                    <tr>
+                        <td>{{items.userName}} </td>
+                        <td>{{items.emailId}} </td>
+                        <td>{{items.role}} </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
