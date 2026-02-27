@@ -8,7 +8,7 @@ import { Master } from '../../services/master';
   styleUrl: './service.css',
 })
 export class Service implements OnInit{
-    master=inject(Master);
+    master=inject(Master);//service
     cdr=inject(ChangeDetectorRef);
     userList:any[]=[];
     ngOnInit(): void {
