@@ -1,7 +1,12 @@
-.content{
-    justify-content: center;
+.col-3{
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+h1{
     text-align: center;
-    margin: 30px;
+}
+.def{
+    text-align: center;
 }
 .foot{
     margin-top: 20px;

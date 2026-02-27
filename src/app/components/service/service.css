@@ -1,14 +1,17 @@
 .content{
+text-align: center;
+}
+.content-2{
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     margin: 30px;
 }
 .foot{
-    margin-top: 20px;
     text-align: center;
 }
 a{
-    text-decoration: none
+    text-decoration: none;
 }
 a:hover{
     font-size: 20px;

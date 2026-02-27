@@ -1,0 +1,50 @@
+<h1>Pipe</h1>
+<p class="def"><span><b>Definition:</b></span>Pipes are nothing but a function which helps as to format the data before rendering.</p>
+<br>
+<div class="row">
+    <div class="col-3">
+        <h5>Upper Case pipe</h5>
+        <p>Without formating-> {{courseName}}</p>
+        <p>After using Uppercase pipe->{{courseName|uppercase}}</p>
+    </div>
+    <div class="col-3">
+        <h5>Lower Case pipe</h5>
+        <p>Without formating-> {{courseName}}</p>
+        <p>After using Lowercase pipe->{{courseName|lowercase}}</p>
+    </div>
+    <div class="col-3">
+        <h5>Title Case pipe</h5>
+        <p>Without formating-> {{sentence}}</p>
+        <p>After using Titlecase pipe->{{sentence|titlecase}}</p>
+    </div>
+    <div class="col-3">
+        <h5>Date pipe</h5>
+        <p>Without formating-> {{currDate}}</p>
+        <p>After using Date pipe->{{currDate|date:'short'}}</p>
+        <p>Another type of using->{{currDate|date:'dd-MM-yyy'}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <h5>Slice Pipe</h5>
+        <p>Without Formating-> {{rollNo}}</p>
+        <p>After using slice pipe->{{rollNo|slice:0:3}}</p>
+        <p>Without Formatting->{{name}}</p>
+        <p>After using slice Pipe->{{name|slice:0:3}}</p>
+    </div>
+    <div class="col-3">
+        <h5>JSON pipe</h5>
+        <p>Without Formating->{{userObj}}</p>
+        <p>AFter using JSON pipe->{{userObj|json}}</p>
+    </div>
+    <div class="col-3">
+        <h5>Custom pipe</h5>
+        <p>Refer the code for implementation of custom pipe</p>
+        <p>Without formating->{{userObj1.name}},city:{{userObj1.address.city}}</p>
+        <p>After using the pipe we created->{{userObj1.name}},city:{{userObj1.address.city|nA}}</p>
+    </div>
+</div>
+<div class="foot">
+    <h4>Refer the codes for better understanding </h4>
+    <a href="https://github.com/Sridhar311/angular_concepts">Codes Here</a>
+</div>

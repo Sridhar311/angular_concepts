@@ -1,0 +1,35 @@
+<div class="content">
+    <h1>Service</h1>
+    <h5>In Angular, a service is a class that contains reusable business logic or data-access code and is shared across components.</h5>
+    <h5>A central place to write logic that multiple components can use</h5>
+</div>
+<div class="content-2">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(item of userList;track $index){
+                <tr>
+                    <td>{{item.name}} </td>
+                    <td>{{item.username}} </td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.website}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="foot">
+    <h5>The above table is fetched using dummy api</h5>
+    <h5>But the api logic is not written inside this component</h5>
+    <h5>It is written in services and used here</h5><br><br>
+    <h4>Refer the codes for better understanding </h4>
+    <a href="https://github.com/Sridhar311/angular_concepts">Codes Here</a>
+</div>

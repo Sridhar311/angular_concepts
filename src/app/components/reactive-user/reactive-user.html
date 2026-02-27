@@ -1,0 +1,51 @@
+<div class="head">
+    <h2>This is Reactive Form:</h2><br>
+    <h4>Template form is used in CRUD page</h4>
+</div>
+<div class="bod">
+    <div class="row" >
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header bg-success">
+                    New User
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="userForm">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="">Email</label>
+                                <input type="text" formControlName="emailId" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="">Password</label>
+                                <input type="text" formControlName="password" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="">FullName</label>
+                                <input type="text" formControlName="fullName" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="">Mobile No</label>
+                                <input type="text" formControlName="mobileNo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-secondary"(click)="onReset()" >Reset</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success" (click)="onSave()"  >Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="foot">
+    <h3>After user created successfully go to CRUD page and check if user is Added</h3>
+    <h4>Refer the codes for better understanding </h4>
+    <a href="https://github.com/Sridhar311/angular_concepts">Codes Here</a>
+</div>

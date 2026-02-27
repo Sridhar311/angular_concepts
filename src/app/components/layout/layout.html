@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+  <div class="container-fluid">
+
+    <!-- BRAND -->
+    <a class="navbar-brand fw-bold" href="#">⚡ Angular </a>
+
+    <!-- TOGGLE (MOBILE) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV ITEMS -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+
+      <!-- LEFT SIDE -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin">Admin</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="controlflow">Control-Flow</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="databinding">Data-binding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signal">Signal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="directive">Directive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="getapi">API</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="crud">CRUD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="form">Reactive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="pipe">Pipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="service">Service</a>
+        </li>
+      </ul>
+      @if(loggedUserName===''){
+          <button class="btn btn-primary btn-sm" routerLink="login">Login</button>
+      }
+      @else{
+        <button class="btn btn-warning btn-sm" >{{loggedUserName}}</button>
+        <button class="btn btn-primary btn-sm" (click)="onLogout()">Logout</button>
+      }
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

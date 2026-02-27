@@ -9,7 +9,7 @@ import { isActive } from '@angular/router';
   styleUrl: './controlflow.css',
 })
 export class Controlflow {
-  isParavisible:boolean=false;
+  isParavisible:boolean=true;
   startMonth:string="jan";
   cityList: string[]=["Coimbatore","Chennai","Bangalore"]
   arrayofObjects :any[]=[
